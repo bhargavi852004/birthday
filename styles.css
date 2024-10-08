@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+
+:root {
+  --main-color: #BDB7E9;
+  --white: #f297df;
+  --text-color: #fff;
+  --bg-color: #080808;
+  --second-bg-color: #151515;
+  --light-color: #f297df;
+  --unq-color: #6a86dbfc;
+}
+
+* {
+  font-family: "Poppins", "sans-serif";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 1rem;
+  height: 10rem;
+}
+::-webkit-scrollbar-track {
+  color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  color: var(--main-color);
+}
+
+html {
+  font-size: 70.5%;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: var(--bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 5%;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  font-size: 2rem;
+  color: var(--text-color);
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.logo span {
+  color: var(--main-color);
+  text-transform: capitalize;
+}
+
+.header .navbar a {
+  font-size: 1.8rem;
+  color: var(--text-color);
+  text-transform: capitalize;
+  font-weight: bold;
+  margin: 0 2rem;
+}
+
+.header .navbar a#Home {
+  color: var(--main-color);
+  text-decoration: underline;
+}
+
+.header .navbar a:hover {
+  color: var(--main-color);
+  text-decoration: underline;
+}
+
+section {
+  padding: 5rem 5%;
+}
+
+
+.home{
+    min-height: 110vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.home .content{
+    display: flex;
+    flex-flow: column;
+    align-items: start;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.home .content h1{
+    font-size: 5rem;
+    color: var(--text-color);
+    text-transform: capitalize;
+}
+.home .content h1 span{
+color: var(--main-color);
+}
+.home .content h3{
+    font-size: 4rem;
+    color: var(--text-color);
+    text-transform: capitalize;
+  
+}
+
+.home img{
+  border-radius: 50%;
+  height: 45rem;
+  width: 45rem;
+  object-fit: cover;
+  box-shadow: 0 0 2.5rem var(--main-color);
+}
+.home img:hover{
+  box-shadow: 0 0 2.5rem var(--main-color),
+              0 0 5rem var(--main-color),
+              0 0 10rem var(--main-color);
+}
+.text-animation{
+  font-size: 4rem;
+  color: var(--text-color);
+  text-transform: capitalize;
+  min-width: 28rem;
+  font-weight: 600;
+}
+.text-animation span{
+  position: relative;
+}
+.text-animation span::before{
+  content: "Chiko";
+  color: var(--main-color);
+  animation: words 20s infinite;
+}
+.text-animation span::after{
+  content: "";
+  background-color: var(--bg-color);
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  border-left: 3px solid var(--bg-color);
+  right: -8px;
+  animation: cursor 0.6s infinite,typing 20s steps(14) infinite;
+}
+@keyframes cursor{
+  to{
+    border-left: 2px solid var(--main-color);
+  }
+}
+@keyframes words{
+  0%,
+  20%{
+    content:"priskilla";
+  }
+  21%,
+  40%{
+    content: "Chiko";
+  }
+  41%,
+  60%{
+    content: "Snail";
+  }
+  61%,
+  80%{
+    content: "Sister";
+  }
+  81%,
+  100%{
+    content: "Priskilla Rani";
+  }
+  
+}
+@keyframes typing {
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95%{
+    width: 0;
+  }
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85%{
+    width: calc(100% + 8px);
+  }
+}
+
